@@ -60,9 +60,7 @@ psql.commit()
 # Need to check whether the link is
 # PNG, JPG, or GIF
 def check_link(url):
-    extensions = ['.png', '.jpg', '.gif']
-
-    for extension in extensions:
+    for extension in ['.png', '.jpg', '.gif']:
         new_url = url + extension
         try:
             if requests.get(new_url).status_code == 404:
